@@ -1,0 +1,123 @@
+// Place all the styles related to the anuncios controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+ .info
+ {
+ 	position:relative;
+ 	background-color: #FFF;
+ 	width: 98%;
+ 	height:auto;
+ 	background: #F0F0F0 url('/assets/bg-search.png');
+ 	padding: 11px;
+ }
+
+ .infoN
+ {
+ 	position:relative;
+ 	background-color: #FFF;
+ 	width: 94%;
+ 	height:auto;
+ 	background: #F0F0F0 url('/assets/bg-search.png');
+ 	padding: 41px;
+ }
+
+ .details
+ {
+ 	margin-left:40px;
+ 	margin-top:40px;
+ }
+
+ .imagens_anuncio
+{
+	width: 350px;
+	position:absolute;
+	bottom:40px;
+	left:700px;
+}
+
+.categories
+{
+	margin-left: -120px;
+}
+
+.sort
+{
+	position:relative;
+	left:300px;
+	padding:10px;
+	height:30px;
+	width: 600px;
+}
+
+#headerSlideContainer {
+	position: fixed;
+	top:-50px;
+	width: 100%;
+	background: white;
+}
+#headerSlideContent {
+	width: 100%;
+	height: 50px;
+	margin: 0 auto;
+	color: white;
+}
+
+.paginate
+{
+	margin-left:330px;
+}
+/***************************DESTAQUES**********************/
+
+.destaques
+{
+	margin-left:400px;
+}
+
+/***************************Anuncio detail page**********************/
+
+.info_anuncio
+{
+	position:absolute;
+	left:400px;
+	top:100px;
+}
+
+.backend
+{
+	position:absolute;
+	left:60px;
+	top:200px;
+}
+
+.mail
+{
+	position:absolute;
+	left:400px;
+	top:0px;
+}
+
+.mail_user
+{
+	position:absolute;
+	left:-800px;
+	top:200px;
+}
+
+/***************************Graficos**********************/
+.media-categoria
+{
+	width:600px;
+	height:105px;
+
+}
+
+.media-precos
+{
+	margin-left:600px;
+	margin-top:-75px;
+	width:700px;
+	height:50px;
+}
+

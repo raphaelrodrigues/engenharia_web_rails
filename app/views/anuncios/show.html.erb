@@ -1,0 +1,189 @@
+<div class="info">
+  <div class="details">
+    <div class="row preco">
+         <div class="span9">
+          <h1><%= @anuncio.nome %></h1>
+         </div>
+    </div>
+      <br><br>
+
+      <% 
+      #numero de imagens do anuncios
+      num_img = quantas_imagens_tem?(@anuncio.assets.count) 
+      %>
+       <div class="row">
+         <div class="span4">
+
+           <div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
+                    <div class="carousel-inner">
+                      <div class="item active"><!-- class of active since it's the first item -->
+                        <%= image_tag @anuncio.assets.first.image(:small) %>
+                        
+                      </div>
+                      
+                   <% if num_img >= 2 %>
+                      <div class="item">
+                        <%= image_tag @anuncio.assets[1].image(:small) %>
+                      </div>
+                  <% end %>
+
+                  <% if num_img == 3 %>
+                      <div class="item">
+                        <%= image_tag @anuncio.assets[2].image(:small) %>
+                        
+                  <% end %>
+                    </div><!-- /.carousel-inner -->
+                   <% if num_img > 1 %>
+                    <!--  Next and Previous controls below
+                          href values must reference the id for this carousel -->
+                      <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+                      <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+                  <% end %>
+                  </div><br><!-- /.carousel -->
+          
+          
+                <% if num_img > 1%>
+                    <ul class="thumbnails">
+                      
+                     <% i = 1  %>
+                        <% while i < num_img  %>
+                            <li class="span2">
+                              <a href="#" class="thumbnail"> 
+                              <%= image_tag @anuncio.assets[i].image(:small) %>
+                              <% i += 1 %>
+                              </a>
+                            </li>
+                        <% end %>
+                    </ul>
+
+                  </div> 
+              <% end %>
+
+    <!--info anuncio-->
+      <div class="info_anuncio">
+        <div class="span6">
+        
+        <div class="span6">
+          <address>
+            <strong>Descricao: </strong> <span><%= @anuncio.descricao %></span><br><br>
+          </address>
+        </div>  
+            
+        <div class="span6">
+          
+          <div class="preco1">
+              <h2>
+              <strong>Preço: €<%= @anuncio.preco %></strong> <br /><br />
+              </h2>
+          </div>
+
+          <p>
+           <strong>Criado há <%=  time_ago_in_words(@anuncio.created_at)  %></strong><br /><br />
+          </p>
+
+           <p>
+             <strong>Tipo: <span class="label label-info"><%= @anuncio.tipo %></span></strong><br /><br />
+             
+            </p>
+
+         
+           <p>
+            <strong>Catgoria:<span class="label label-warning"><%= @category_name %></span></strong><br /><br />
+            
+          </p>
+        
+         <p>
+          <strong>
+            Utilizador do anuncio:
+            <% u = User.find(@anuncio.user_id) %>
+            <%= link_to name = u[:username], u %>
+          </strong><br /><br />
+        </p> 
+    </div><!--fim info anuncio--> 
+ 
+  </div>
+    <!--BAckENd ZONE-->
+    <div class="backend">
+        <% if isModerador? || belongs_toUser?(@anuncio.user_id) %>
+          <%= link_to 'Destroy', @anuncio , method: :delete, data: { confirm: 'Are you sure?' } ,:class =>'btn btn-important'%>
+          <%= link_to 'Edit', edit_anuncio_path(@anuncio),:class =>'btn' %>
+
+          <%= if isActivo?(@anuncio.activo)  && belongs_toUser?(@anuncio.user_id)
+              link_to "Fechar negócio!!", desactivar_anuncio_path , method: :desactivar, data: { confirm: 'Tem a certeza?' } ,:class =>'btn'
+             elsif !isActivo?(@anuncio.activo)  && belongs_toUser?(@anuncio.user_id)
+               link_to "Re-Activar", activar_anuncio_path , method: :activar, data: { confirm: 'Tem a certeza?' } ,:class =>'btn'
+            end
+          %>
+
+        <% end %>
+        
+    </div><!--fim do backend zone--> 
+
+        <div class="mail">
+
+          <p>
+            <%= link_to  image_tag('social_icons/facebook.jpg') ,"http://www.facebook.com",:title=>"Partilhar no Facebook" %> 
+            <%= link_to  image_tag('social_icons/twitter.jpg') ,"http://www.twitter.com" ,:title=>"Partilhar no Twitter"%>
+          <p>
+          <br>
+          <button class="btn btn-primary" type="submit">Add to WishList</button><br><br>
+
+        </div>
+
+      </div>
+
+
+      <% if isActivo?(@anuncio.activo) %>
+        <div class="row">
+        <div class="span9">
+        <div class="tabbable">
+        <ul class="nav nav-tabs">
+        <li class="active"><a href="#1" data-toggle="tab">Descrição</a></li>
+        <li><a href="#2" data-toggle="tab">Reviews</a></li>
+        <li><a href="#3" data-toggle="tab">Anuncios Relacionados</a></li>
+        </ul>
+        <div class="tab-content">
+        <div class="tab-pane active" id="1">
+        <p><%= @anuncio.descricao %></p>
+        </div>
+        <div class="tab-pane" id="2">
+        <p>There are no reviews for this product.</p>
+        </div>    
+
+
+
+      <div class="tab-pane" id="3">
+            <ul class="thumbnails related_products">
+            <% if !@anuncios_relacionados.nil? %> 
+              <% @anuncios_relacionados.each do |a| %>
+                <% if a.id !=  @anuncio.id %>
+                 <li class="span2">
+                      <div class="thumbnail">
+                         <%= link_to (image_tag a.assets.first.image(:small) ), a %>
+                        <div class="caption">
+                          <a href="product.html"> <h5><%= a.nome %></h5></a>  Preco: €<%= a.preco %><br /><br />
+                        </div>
+                      </div>
+                    </li>
+                  <% end %>
+              <% end %>
+            <% end %>
+
+          
+
+
+            </ul>
+        </div>
+        </div>
+        </div>
+
+        </div>
+        </div>
+
+<% end %>
+
+       
+      
+        </div>
+  </div>
+</div>

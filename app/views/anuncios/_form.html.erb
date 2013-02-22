@@ -1,0 +1,145 @@
+<div class="container-fluid">      
+
+ <div class="infoN">
+  <%= form_for @anuncio , :html => { :multipart => true } do |f| %>
+    <% if @anuncio.errors.any? %>
+      <div id="error_explanation">
+
+            <div class="alert alert-error">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>Atenção</strong> 
+                <ul>
+                  <% @anuncio.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                  <% end %>
+                </ul>
+            </div>
+      </div>
+    <% end %>
+
+   <div class="row-fluid">   
+            <div class="span2 lightblue">
+               <div class="field">
+                  <%= f.label :nome %><br />
+                  <%= f.text_field :nome ,:class=>"span12" %>
+                </div>          
+            </div><!--/span-->
+            <div class="span5 lightblue">
+              <div class="field">
+                <%= f.label :descricao %><br />
+                <%= f.text_area :descricao , :rows=>5, :cols=>40,:class=>"span12" %>
+              </div>    
+            </div><!--/span-->
+            <div class="span5 lightblue">
+              <div class="field">
+                <%= f.label :preco %><br />
+                <%= f.text_field :preco %>
+              </div>
+            </div><!--/span-->
+          </div><!--/row-->
+
+        <%= f.hidden_field :dataSubmissao %>
+        <%= f.hidden_field :activo ,:value => 1%>
+
+  <div class="field">
+    <%= f.label :tipo %><br />
+    <%= f.hidden_field :tipo,:id =>"btn-input-tipo", :value =>  @anuncio.tipo  %>
+  </div>
+
+  <!-- verifica se entra na pagina de edit ou de new-->
+  <% if current_page?(new_anuncio_path) %>
+        <div class="btn-group" data-toggle="buttons-radio">
+            <button  type="button" class="btn" value="Venda" onClick="$('#btn-input-tipo').val( $(this).val() );">Venda</button>
+            <button  type="button" class="btn" value="Compra" onClick="$('#btn-input-tipo').val( $(this).val() );">Compra</button>
+            <button  type="button" class="btn" value="Troca" onClick="$('#btn-input-tipo').val( $(this).val() );">Troca</button>
+        </div>
+        <br><br>  
+   <% else %>
+      <div class="btn-group" data-toggle="buttons-radio">
+            <button  type="button" class="btn <%= 'active' if @anuncio.tipo == "Venda" %>" value="Venda" onClick="$('#btn-input-tipo').val( $(this).val() );">Venda
+            </button>
+
+            <button  type="button" class="btn <%= 'active' if @anuncio.tipo == "Compra" %>" value="Compra" onClick="$('#btn-input-tipo').val( $(this).val() );">Compra
+            </button>
+
+            <button  type="button" class="btn <%= 'active' if @anuncio.tipo == "Troca" %>" value="Troca" onClick="$('#btn-input-tipo').val( $(this).val() );">Troca
+            </button>
+
+        </div>
+      <br><br>
+   <% end %>
+   <!-- end-->
+
+
+  <% if !current_page?(new_anuncio_path) %>
+    <div class="field">
+
+      <%= f.label :destaque %>
+      <%= f.check_box :destaque %>
+    </div>
+  <% end %>
+  
+  <%= f.hidden_field :user_id ,:value => current_user.id %>
+
+  <div class="field">
+    <%= f.label :category_id %><br />
+    <%= f.hidden_field :category_id,:id =>"btn-input", :value => @anuncio.category_id %>
+  </div>
+
+ 
+  <!-- verifica se entra na pagina de edit ou de new-->
+  <% if current_page?(new_anuncio_path) %>
+        <div class="btn-group" data-toggle="buttons-radio">
+            <% @categories.each do |categoria| %>
+               <button  type="button" class="btn" value="<%= "#{categoria.id}" %>" onClick="$('#btn-input').val( $(this).val() );"><%= categoria.nome %></button>
+            <% end %>
+        </div>
+        <br><br>  
+   <% else %>
+      <div class="btn-group" data-toggle="buttons-radio">
+          <% @categories.each do |categoria| %>
+             <button  type="button" class="btn <%= 'active' if categoria.id == @anuncio.category_id %>" value="<%= "#{categoria.id}" %>" onClick="$('#btn-input').val( $(this).val() );"><%= categoria.nome %></button>
+          <% end %>
+      </div>
+      <br><br>
+   <% end %>
+   <!-- end-->
+
+    <p> Imagens </p>
+   <!--imagens-->
+   <div class="newPaperclipFiles">
+
+        <%= f.fields_for :assets do |asset| %>
+        
+           <% if asset.object.new_record? %>
+                 <%= asset.file_field :image %>
+           <% end %>
+
+       <% end %>
+
+    </div>
+
+    <div class="existingPaperclipFiles">
+            
+         <% f.fields_for :assets do |asset| %>
+            
+              <% unless asset.object.new_record? %>
+            
+                    <div class="thumbnail">
+                            <%= link_to( image_tag(asset.object.image.url(:thumb)), asset.object.image.url(:original) ) %>
+                            <%= asset.check_box :_destroy %>
+                    </div>
+                    
+              <% end %>        
+            
+         <% end %>
+    </div><br >
+
+
+    <div class="actions">
+      <%= f.submit "Publicar Anúncio",:class => "btn btn-primary" %>
+    </div>
+  <% end %>
+</div><!-- fim da info-->
+
+

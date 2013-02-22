@@ -1,0 +1,65 @@
+
+<div class="row-fluid">
+    <div class="block span6">
+        <a href="#tablewidget" class="block-heading" data-toggle="collapse">Ultimas Anuncios<span class="label label-warning">+8</span></a>
+        <% @ultimos_anuncios = ultimos_anuncios(8) %>
+        <div id="tablewidget" class="block-body collapse in">
+        
+        </div>
+        <table class="table table-striped sortable1" >
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Descricao</th>
+                  <th>Preco</th>
+                  <th>Categoria</th>
+                  <th>Tipo</th>
+                </tr>
+              </thead>
+
+            <% @ultimos_anuncios.each do |anuncio| %>
+              <tr>
+                <td><%=link_to anuncio.nome , anuncio%></td>
+                <td><%= anuncio.descricao %></td>
+                <td><%= anuncio.preco unless (anuncio.tipo == "TIPO") %>€</td>
+                <td><%= anuncio.category_id %></td>
+                <td><%= anuncio.tipo %></td>
+              </tr>
+            <% end %>
+            </table>
+    </div>
+    
+    <div class="block span6">
+        <a href="#widget1container" class="block-heading" data-toggle="collapse">Estatisticas </a>
+        <div id="widget1container" class="block-body collapse in">
+           <div id="tablewidget" class="block-body collapse in">
+            <%= high_chart("my_id1", get_grafico_anuncio_categoria ) %>
+        </div>
+      </div>
+    </div>
+
+   
+    
+    <div class="block span6">
+        <a href="#widget1container1" class="block-heading" data-toggle="collapse">Ranking Utilizadores </a>
+        <div id="widget1container1" class="block-body collapse in">
+           <div id="tablewidget" class="block-body collapse in">
+            <% @lista_users =  ranking_anuncios %>
+
+                 <table class="table table-striped sortable1" >
+                          <tr>
+                            <th>Nome</th>
+                            <th>Nº anuncios</th>
+                          </tr>
+                        <% @lista_users.each do |l| %>
+                          <tr>
+                            <td><%= link_to l.username, "/users/"+l.id.to_s %></td>
+                            <td><%= l.n_anuncios %></td>
+                          </tr>
+                        <% end %>
+                 </table>
+        </div>
+      </div>
+    </div>
+
+</div>

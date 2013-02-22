@@ -1,0 +1,494 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cate",
+				"categories"
+			],
+			[
+				"ca",
+				"categories"
+			],
+			[
+				"s",
+				"script"
+			],
+			[
+				"des",
+				"desactivar"
+			],
+			[
+				"anu",
+				"anuncio"
+			],
+			[
+				"desca",
+				"Desactivar"
+			],
+			[
+				"anun",
+				"anuncio_id"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"margin-",
+				"margin-left"
+			],
+			[
+				"categ",
+				"categoria"
+			],
+			[
+				"pre",
+				"preco"
+			],
+			[
+				"is",
+				"isAdmin"
+			],
+			[
+				"st",
+				"style"
+			],
+			[
+				"anunc",
+				"anuncios"
+			],
+			[
+				"use",
+				"user_id"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"passw",
+				"password"
+			],
+			[
+				"Utiliza",
+				"utilizador"
+			],
+			[
+				"se",
+				"search"
+			],
+			[
+				"bt",
+				"btn"
+			],
+			[
+				"ar",
+				"articles"
+			],
+			[
+				"par",
+				"params"
+			],
+			[
+				"Ar",
+				"Article"
+			],
+			[
+				"ge",
+				"GET"
+			],
+			[
+				"org",
+				"Organizacao"
+			],
+			[
+				"mysql_re",
+				"mysql_real_escape_string"
+			],
+			[
+				"a",
+				"alert"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/controllers/sessions_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1142,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/users_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1753,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/show.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/controllers/anuncios_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/main.js",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/categories/_form.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/categories/index.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/highcharts.js",
+		"/Users/raphaelrodrigues/rails_project/web/Gemfile",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/application.js",
+		"/Users/raphaelrodrigues/rails_project/web/config/routes.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/dashboard.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/estatisticas.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/controllers/categories_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/models/category.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/index.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/_users.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/show.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/_form.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/controllers/users_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/helpers/application_helper.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/models/anuncio.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/models/user.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/index.js.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/index.js.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/venda.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/compra.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/layouts/application.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/desactivos.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_form.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/controllers/application_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_anuncios.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/index.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/new.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_anuncio.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/vendo.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/_anuncios.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/anuncios.css.scss",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/application.css",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/sessions.css.scss",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/sessions/new.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/app.css",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/users.css.scss",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/style.css",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/new.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/demo.css",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/common.css",
+		"/Users/raphaelrodrigues/Downloads/CircleHoverEffects/index.html",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_dashboard2.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/style1.css",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/bootstrap.css",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/anuncios.js.coffee",
+		"/Users/raphaelrodrigues/rails_project/web/public/javascripts/application.js",
+		"/Users/raphaelrodrigues/rails_project/web/public/javascripts/script.js",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_left-bar.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/db/migrate/20130208000253_add_status_column_to_users.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/controllers/sessions_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/categories/_categories.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/config/environments/production.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/script.js",
+		"/Users/raphaelrodrigues/rails_project/web/public/assets/script.js",
+		"/Users/raphaelrodrigues/rails_project/web/db/migrate/20130204141728_create_anuncios.rb",
+		"/Users/raphaelrodrigues/rails_project/web/public/assets/application.js",
+		"/Users/raphaelrodrigues/rails_project/web/db/migrate/20130205233156_add_category_column_to_anuncios.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/_anuncio.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/edit.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/db/migrate/20130204135847_create_users.rb",
+		"/Users/raphaelrodrigues/Desktop/CentOS.vmwarevm 3/web/app/models/anuncio.rb",
+		"/Users/raphaelrodrigues/Desktop/CentOS.vmwarevm 3/web/db/migrate/20130205223844_create_categories.rb",
+		"/Users/raphaelrodrigues/Desktop/CentOS.vmwarevm 3/web/db/migrate/20130204141728_create_anuncios.rb",
+		"/Users/raphaelrodrigues/Desktop/CentOS.vmwarevm 3/web/app/models/category.rb",
+		"/Users/raphaelrodrigues/Desktop/CentOS.vmwarevm 3/web/app/models/question.rb",
+		"/Users/raphaelrodrigues/Desktop/CentOS.vmwarevm 3/web/app/controllers/users_controller.rb",
+		"/Users/raphaelrodrigues/Desktop/CentOS.vmwarevm 3/web/app/controllers/anuncios_controller.rb",
+		"/Users/raphaelrodrigues/Desktop/CentOS.vmwarevm 3/web/app/controllers/application_controller.rb",
+		"/Users/raphaelrodrigues/Desktop/CentOS.vmwarevm 3/web/app/controllers/sessions_controller.rb",
+		"/Users/raphaelrodrigues/Desktop/CentOS.vmwarevm 3/web/app/controllers/categories_controller.rb",
+		"/Users/raphaelrodrigues/Desktop/CentOS.vmwarevm 3/web/app/views/anuncios/show.html.erb",
+		"/Users/raphaelrodrigues/Desktop/CentOS.vmwarevm 3/web/app/views/layouts/application.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/Rakefile",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/surveys/show.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/surveys/index.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/surveys/edit.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/surveys/new.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/surveys/_question_fields.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/surveys/_answer_fields.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/surveys/_form.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/controllers/surveys_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/models/answer.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/models/survey.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/models/question.rb",
+		"/Users/raphaelrodrigues/rails_project/web/config/environment.rb",
+		"/Users/raphaelrodrigues/rails_project/web/vendor/plugins/paperclip/Rakefile",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/prettyCheckable.js",
+		"/Users/raphaelrodrigues/rails_project/olx++/config/routes.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/users.js.coffee",
+		"/Users/raphaelrodrigues/rails_project/web/app/models/image.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/controllers/images_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/bootstrap-responsive.css",
+		"/Users/raphaelrodrigues/rails_project/web/public/favicon.ico",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/bootstrap-alert.js",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/search.html.erb",
+		"/Users/raphaelrodrigues/rails_project/olx++/app/controllers/anuncios_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/olx++/app/views/anuncios/search.html.erb",
+		"/Users/raphaelrodrigues/Documents/repositorio/templates_pesqusia/index.html",
+		"/Users/raphaelrodrigues/rails_project/invoices/app/views/layouts/application.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/prettyCheckable.css",
+		"/Users/raphaelrodrigues/rails_project/teste/app/assets/stylesheets/app.css",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/images/bg-search.png",
+		"/Users/raphaelrodrigues/rails_project/olx++/app/views/layouts/application.html.erb",
+		"/Users/raphaelrodrigues/rails_project/teste/app/views/layouts/application.html.erb",
+		"/Users/raphaelrodrigues/rails_project/teste/app/assets/stylesheets/application.css",
+		"/Users/raphaelrodrigues/rails_project/teste/app/assets/stylesheets/scaffolds.css.scss",
+		"/Users/raphaelrodrigues/rails_project/web/public/robots.txt",
+		"/Users/raphaelrodrigues/rails_project/web/public/index.html",
+		"/Users/raphaelrodrigues/rails_project/web/public/404.html",
+		"/Users/raphaelrodrigues/rails_project/web/public/422.html",
+		"/Users/raphaelrodrigues/rails_project/web/public/500.html",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/scaffolds.css.scss",
+		"/Users/raphaelrodrigues/Documents/repositorio/templates_pesqusia/css/app.css",
+		"/Users/raphaelrodrigues/Documents/repositorio/templates_pesqusia/assets/css/bootstrap.css",
+		"/Users/raphaelrodrigues/Documents/repositorio/templates_pesqusia/assets/css/bootstrap-responsive.css",
+		"/Users/raphaelrodrigues/Documents/repositorio/templates_pesqusia/animate.css",
+		"/Users/raphaelrodrigues/Documents/repositorio/templates_pesqusia/assets/css/style.css",
+		"/Users/raphaelrodrigues/Documents/repositorio/templates_pesqusia/assets/css/prettyCheckable.css",
+		"/Users/raphaelrodrigues/rails_project/invoices/app/controllers/invoices_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/invoices/app/models/invoice.rb",
+		"/Users/raphaelrodrigues/rails_project/invoices/app/controllers/application_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/invoices/app/controllers/users_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/invoices/app/controllers/sessions_controller.rb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			" '",
+			"h1",
+			"span",
+			"entypo",
+			"entypo-facebook",
+			"nav-pills",
+			"<div class=\"btn-group\" data-toggle=\"buttons-radio\">\n    <% @categories.each do |categoria| %>\n       <button type=\"button\" class=\"btn\" value=\"<%= \"#{categoria.id}\" %>\"><%= categoria.nome %></button>\n    <% end %>\n  </div>\n  <br><br>",
+			"<div class=\"thumbnail\">",
+			"@",
+			"alert(\"",
+			"name",
+			"40",
+			"prettyCheckable",
+			"search-section",
+			"404-page {",
+			"@",
+			"invoices",
+			"company",
+			"user",
+			"utiliza",
+			"user",
+			"user\n",
+			" user \n",
+			"  \n",
+			"end",
+			"comments",
+			"<h1>New Post</h1>\n<%= form_for :post, url: { action: :create } do |f| %>\n  <p>\n    <%= f.label :title %><br>\n    <%= f.text_field :title %>\n  </p>\n \n  <p>\n    <%= f.label :text %><br>\n    <%= f.text_area :text %>\n  </p>\n \n  <p>\n    <%= f.submit %>\n  </p>\n<% end %>\n<%= link_to 'Back', action: :index %>",
+			"view",
+			"<p id=\"notice\"><%= notice %></p>\n\n<p>\n  <b>Customer:</b>\n  <%= @order.customer_id %>\n</p>\n\n<p>\n  <b>Status:</b>\n  <%= @order.status %>\n</p>\n\n\n<%= link_to 'Edit', edit_order_path(@order) %> |\n<%= link_to 'Back', orders_path %>\n",
+			"%></",
+			"sty",
+			"styles",
+			"stylesh",
+			"styleshh",
+			"<meta charset=\"utf-8\">"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"nome",
+			"",
+			"utilizador",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/controllers/sessions_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1142,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/users_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1753,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 193.0,
+	"status_bar_visible": true
+}

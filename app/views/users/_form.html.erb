@@ -1,0 +1,64 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <fieldset>
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <%= f.label :password %><br />
+     <p>
+          <%= f.password_field :password,:placeholder => 'Password' %>
+        </p>
+        <p>
+          <%= f.password_field :password_confirmation ,:placeholder => 'Re-Enter Password'%>
+        </p>
+
+  <br>
+
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.hidden_field :status,:id =>"btn-input", :value => @user.status %>
+  </div>
+
+<div class="input">
+   <select name="user[dashboard]"  class="selectpicker"> 
+      <option value="">Please select</option> 
+      <option value="N" >Normal</option> 
+      <option value="E" >Estatisticas</option> 
+    </select>
+ </div><br >
+
+
+
+  <!--se for a pagina for de edicao mostra opcao de mudar status do User-->
+  <% if current_page?(edit_user_path) %>
+
+    <div class="btn-group" data-toggle="buttons-radio">
+         <button name="status" type="button" class="btn <%= 'active' if @user.status == 'R' %>" value="R" onClick="$('#btn-input').val( $(this).val() );">Normal</button>
+         <button name="status" type="button" class="btn <%= 'active' if @user.status == 'M' %>" value="M" onClick="$('#btn-input').val( $(this).val() );">Moderador</button>
+         <button name="status" type="button" class="btn <%= 'active' if @user.status == 'A' %>" value="A" onClick="$('#btn-input').val( $(this).val() );">Administrador</button>
+      <% end %>
+    </div>
+    <br><br><br><br>
+</fieldset>
+  <div class="actions">
+     <%= f.submit "Actualizar Utilizador",:class => "btn btn-primary" %>
+    
+  </div>
+ <br>
+<% end %>

@@ -1,0 +1,30 @@
+<div class="categories">
+ <div class="row">
+	 <div class="span9"><!-- start categories -->
+		<ul class="thumbnails">
+      <%  arry = [
+             image_tag('cat_mp3.jpg'),
+             image_tag('cat_camera_photo.png'),
+             image_tag('informatica.jpg'),
+             image_tag('cat_phone.png'),
+             image_tag('sony-rolly.jpg'),
+             image_tag('cat_games.png'),
+             ]
+          i = 0;
+      %>
+      <% @categories.each do |categoria| %>
+          <li class="span3">
+            <div class="thumbnail">
+              <%= link_to  image_tag categoria.cassets.first.image(:small) %>
+              <div class="caption">
+  			      <a href="listings.html"><h5><%= categoria.nome %></h5></a>
+              </div>
+
+            </div>
+          </li>
+          <% i += 1 %>
+       <% end %>
+      </ul>
+	  </div><!-- end  -->
+  </div>
+</div><!--end class=categories-->

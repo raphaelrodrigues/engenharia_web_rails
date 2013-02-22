@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nome: MyString
+  descricao: MyText
+  preco: 9.99
+  dataSubmissao: 2013-02-04
+  activo: 1
+  tipo: MyString
+  destaque: false
+  user_id: 1
+
+two:
+  nome: MyString
+  descricao: MyText
+  preco: 9.99
+  dataSubmissao: 2013-02-04
+  activo: 1
+  tipo: MyString
+  destaque: false
+  user_id: 1

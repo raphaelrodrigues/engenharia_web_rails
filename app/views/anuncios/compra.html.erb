@@ -1,0 +1,13 @@
+<%= render :partial => 'left-bar' %>
+
+
+<div id="anuncios">
+	<%= render :partial => 'anuncios' %>
+</div>
+
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+
+<div class="paginate">
+	<%= will_paginate @anuncios, :inner_window => 2 %>
+</div>

@@ -1,0 +1,31 @@
+<ul class="thumbnails related_products">
+  <% @user.anuncios.each do |anuncio| %>
+     <li class="span2">
+           <div class="thumbnail">
+              <%= link_to (image_tag anuncio.assets.first.image(:small)) , anuncio %>
+            <div class="caption">
+
+                      <h5><%= anuncio.nome %></h5></a>  Preço: €<%= anuncio.preco %><br /><br />
+                         <h3></h3>
+                            <p><%= anuncio.descricao %></p>
+                            
+                              <p>
+                                <b>Nome:</b>
+                                <%= anuncio.nome %>
+                              </p>
+
+                              <p>
+                                <b>Descricao:</b>
+                                <%= anuncio.descricao %>
+                              </p>
+                              <p><%= link_to 'Show ', anuncio %>&nbsp;&nbsp;&nbsp;&nbsp;
+                               <% if isModerador? || belongs_toUser?(anuncio.user_id)%>
+                                <%= link_to 'Edit', edit_anuncio_path(anuncio) %>
+                              <% end %>
+            </div>
+          </div>
+        </li>
+  <% end %>
+</ul>
+   
+

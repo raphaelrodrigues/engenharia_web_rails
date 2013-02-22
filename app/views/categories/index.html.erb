@@ -1,0 +1,26 @@
+<h1>Listing categories</h1>
+
+<table class="table table-striped" >
+  <tr>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= category.nome %></td>
+    <td><%= link_to 'Ver', category %></td>
+    <td><%= link_to 'Editar', edit_category_path(category) %></td>
+    <td><%= link_to 'Apagar', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= render 'form' %>
+<br>
+
+

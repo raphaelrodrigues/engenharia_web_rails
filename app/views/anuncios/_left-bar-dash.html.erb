@@ -1,0 +1,46 @@
+<!-- Barra da esquerda de pesquisa "avancada"(separei para ficar mais clean o codigo)  -->
+<!-- Start Left Sidebar  -->
+<div class="row">
+  <div class="span3">
+<div class="sidebar-nav">
+  <div class="base">
+
+
+
+    <ul class="nav nav-list">
+                <li class="nav-header">Categories</li>
+                <li class="active"><a href="#"><div class="fs1" aria-hidden="true" ></div>Todos as categorias</a></li>
+                 <% @categories.each do |categoria| %>
+                   <li><a href="#" value="<%= "#{categoria.id}" %>"> <%= categoria.nome %></a></li>
+                <% end %>
+                <li class="divider"></li>
+    </ul>
+
+
+   <ul class="nav nav-list">
+
+                <li class="nav-header">Locations</li>
+                <li class="active"><a href="#"><div class="fs1" aria-hidden="true" ></div>Todas</a></li>
+                <li><a href="#">Braga</a></li>
+                <li><a href="#">Porto</a></li>
+                <li><a href="#">Lisboa</a></li>
+                <li><a href="#">Coimbra</a></li>
+                <li><a href="#">Algarve</a></li>
+                
+
+                <li class="divider"></li>
+
+
+                <li class="nav-header">Price Range</li>
+                <li>
+                <form class="form-inline">
+                <input type="text" class="input-small" placeholder="Min">
+                <input type="text" class="input-small" placeholder="Max">
+                </form>
+                </li>
+              <br>
+  </ul>
+  </div>
+  </div>
+  </div>
+  <!-- END Left Sidebar  -->

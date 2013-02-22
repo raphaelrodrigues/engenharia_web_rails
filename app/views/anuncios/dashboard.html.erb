@@ -1,0 +1,42 @@
+
+<% if  signed_in? && current_user.dashboard == "E"  %>
+
+   <%= render :partial => 'dashboard3' %>
+<% else %>
+
+  <%= render :partial => 'left-bar-dash' %>
+
+
+
+ 
+  <div class="categories">
+   <div class="row">
+  	 <div class="span9"><!-- start categories -->
+  		<ul class="ch-grid">
+        <%  
+            i = 1;
+        %>
+        <% @categories.each do |categoria| %>
+            <li>
+              <div class="ch-item ch-img-<%= i %>">
+                <div class="ch-info" onclick="location.href='http://localhost:3000/anuncios?category_id=<%= categoria.id %>'" id="<%= categoria.id %>">
+                  <h3><%= categoria.nome %></h3>
+                  <p>by Charlie Wagers <a href="http://drbl.in/ekhp">View on Dribbble</a></p>
+                </div>
+
+              </div>
+            </li>
+            <% i += 1 %>
+         <% end %>
+        </ul>
+  	  </div><!-- end  -->
+    </div>
+  </div><!--end class=categories-->
+
+  <div class="destaques" >
+    <%= render 'destaques' %>
+ </div>
+
+
+<% end %>
+

@@ -1,0 +1,26 @@
+ <table  class="table table-striped sortable1">
+  <thead>
+    <tr>
+      <th data-sort='Username'>Username</th>
+      <th data-sort='Email'>Email</th>
+      <th data-sort='Status'>Status</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= link_to user.username, user %></td>
+      <td><%= user.email %></td>
+      <td><%= user.status %></td>
+      <td></td>
+      <% if isAdmin? %>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+      <%end %>
+      <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </table>
+
+  <br />

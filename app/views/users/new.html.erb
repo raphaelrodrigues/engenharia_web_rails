@@ -1,0 +1,33 @@
+ <div id="login">
+    <h1>Registar-se ou fazer <%= link_to "Login", log_in_path, :method => "get" %> </h1>
+
+    <%= form_for @user do |f| %>
+      <% if @user.errors.any? %>
+        <div class="error_messages">
+          <h2>Form is invalid</h2>
+          <ul>
+            <% for message in @user.errors.full_messages %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <fieldset>
+         <p>
+          <%= f.text_field :username, :placeholder => 'Username',:onBlur=>"if(this.value=='')this.value='Username'",:onFocus=>"if(this.value=='Username')this.value='' "%>
+        </p>
+        <p>
+          <%= f.text_field :email,:placeholder => 'Email',:onBlur=>"if(this.value=='')this.value='Email'",:onFocus=>"if(this.value=='Email')this.value='' "  %>
+        </p>
+        <p>
+          <%= f.password_field :password,:placeholder => 'Password' %>
+        </p>
+        <p>
+          <%= f.password_field :password_confirmation ,:placeholder => 'Re-Enter Password'%>
+        </p>
+        <p class="button"><%= f.submit %></p>
+
+    </fieldset>
+    <% end %>
+</div>

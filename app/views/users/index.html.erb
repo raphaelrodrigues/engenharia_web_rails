@@ -1,0 +1,16 @@
+<h1>Lista de Utilizadores</h1>
+
+
+<%= form_tag users_path, :method => 'get'  ,:class => 'form-inline', :id=>'users_search' do  %>
+   <%= text_field_tag :username, params[:username], :class =>"span5 search-input",:placeholder => "Search by Username...",:autocomplete=>"off" %>
+
+<br><br>
+<div id="users">  
+  <%= render :partial =>'users' %>
+<div>
+
+<%= link_to 'New User', new_user_path,:class => 'btn' %>
+
+<% end %>
+</div>
+</div>

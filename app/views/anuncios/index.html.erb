@@ -1,0 +1,22 @@
+<%= render :partial => 'left-bar' %>
+
+
+<div id="anuncios">
+	<%= render :partial => 'anuncios' %>
+</div>
+
+
+<div id="headerSlideContainer">
+	<div id="headerSlideContent"><br>
+		<div id="search-section1">
+	          <%= form_tag anuncios_path, :method => 'get'  ,:class => 'form-inline' do  %>
+	            <%= text_field_tag :nome, params[:nome], :class =>"span5 search-input", :placeholder => "Search by Keyword..." %>
+	             <%= submit_tag "Search", :nome => nil,:class => 'btn btn-blue'  %>
+	          <% end %>
+	    </div> 
+	</div>
+</div>
+
+<div class="paginate">
+	<%= will_paginate @anuncios, :inner_window => 2 %>
+</div>

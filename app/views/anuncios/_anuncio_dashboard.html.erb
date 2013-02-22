@@ -1,0 +1,21 @@
+ <table class="table table-striped sortable1" >
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Descricao</th>
+                  <th>Preco</th>
+                  <th>Categoria</th>
+                  <th>Tipo</th>
+                </tr>
+              </thead>
+
+            <% @ultimos_anuncios.each do |anuncio| %>
+              <tr>
+                <td><%= anuncio.nome %></td>
+                <td><%= anuncio.descricao %></td>
+                <td><%= anuncio.preco unless (anuncio.tipo == "TIPO") %>€</td>
+                <td><%= anuncio.category_id %></td>
+                <td><%= anuncio.tipo %></td>
+              </tr>
+            <% end %>
+            </table>

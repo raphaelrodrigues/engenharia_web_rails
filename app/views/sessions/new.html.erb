@@ -1,0 +1,34 @@
+ <div id="login">
+	 <h1><strong>Bem vindo</strong> Please login.</h1>
+
+	<%= form_tag sessions_path do %>
+	<fieldset>
+		   <p>
+		    <%= text_field_tag :username, params[:username],:placeholder => 'Username',:onBlur=>"if(this.value=='')this.value='Username'",:onFocus=>"if(this.value=='Username')this.value='' "%>
+		  </p>
+
+		  <p>
+		     <%= password_field_tag :password,:placeholder => 'Password' %>
+		  </p>
+
+		  <p><a href="#">Forgot Password?</a></p>
+		   <p><a href="/sign_up">Registar-se</a></p>
+		  <p class="button"><%= submit_tag "Log in" ,:class=> 'twitter'%></p>
+	  <fieldset>
+	    <p><span class="btn-round">or</span></p>
+
+	    <p>
+
+	      <a class="facebook-before"><span class="fontawesome-facebook"></span></a>
+	      <button class="facebook">Login Using Facbook</button>
+
+	    </p>
+	    <br>
+	    <p>
+
+	      <a class="twitter-before"><span class="fontawesome-twitter"></span></a>
+	      <button class="twitter">Login Using Twitter</button>
+
+	    </p>
+	<% end %>
+</div>

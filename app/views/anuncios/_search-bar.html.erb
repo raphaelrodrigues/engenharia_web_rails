@@ -1,0 +1,15 @@
+<!-- Start Search Section  -->
+
+    <div id="search-section">
+       <div class="row">
+        <div class="span12">
+          <%= form_tag anuncios_path, :method => 'get'  ,:class => 'form-inline' do  %>
+            <%= text_field_tag :nome, params[:nome], :class =>"span5 search-input", :placeholder => "Search by Keyword..." %>
+             <%= submit_tag "Search", :nome => nil,:class => 'btn btn-blue'  %>
+
+          <% end %>
+        </div>
+      </div>
+    </div> 
+
+  <!-- End Search Section  -->

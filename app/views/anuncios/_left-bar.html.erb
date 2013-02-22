@@ -1,0 +1,79 @@
+<!--Barra da esquerda de pesquisa "avancada"(separei para ficar mais clean o codigo)  -->
+<!-- Start Left Sidebar  -->
+<div class="row">
+  <div class="span3">
+<div class="sidebar-nav">
+  <div class="base">
+    <ul class="nav nav-list">
+      <br>
+         <%= form_tag pesq_path, :method => 'get'  ,:class => 'form-inline' do  %>
+          <%= text_field_tag :nome, params[:nome], :class =>"search-input", :placeholder => "Search by Keyword..." %>
+
+    </ul>
+
+   <div class="field1" style="display:none;">
+      <%= text_field_tag :category_id, params[:category_id], :id=>"btn-input-category_id", :value =>  0 %>
+   
+    </div>
+    
+    
+    <ul class="nav nav-list cat">
+                <li class="nav-header">Categories</li>
+                <li class="active" value="0"><a><div class="fs1" aria-hidden="true"  ></div>Todos as categorias</a></li>
+                 <% @categories.each do |categoria| %>
+                   <li value="<%= categoria.id %>" > <a><%= categoria.nome %></a></li>
+                <% end %>
+                <li class="divider"></li>
+
+    </ul>
+
+    <div class="field1" style="display:none;">
+      <%= text_field_tag :tipo, params[:tipo], :id=>"btn-input-tipo", :value =>  0 %>
+   
+    </div>
+
+   
+      <ul class="nav nav-list tipo">
+                <li class="nav-header">Tipo</li>
+                <li class="active" value="0" ><a><div class="fs1" aria-hidden="true"  value="0"></div>Todos os tipos</a></li>
+                   <li  value="1" ><a>Compra</a></li>
+                   <li  value="2" ><a>Venda</a></li>
+                   <li  value="3" ><a>Troca</a></li>
+                <li class="divider"></li>
+    </ul>
+
+
+   <ul class="nav nav-list">
+
+
+                 <li class="nav-header">Price Range</li>
+               
+                   <%= text_field_tag :minimum_price, params[:minimum_price], :class =>"search-input", :placeholder => "min" %>
+                  <%= text_field_tag :maximum_price, params[:maximum_price], :class =>"search-input", :placeholder => "max" %>
+                <li class="divider"></li>
+                <li class="nav-header">Other Options</li>
+                <div class="">
+                
+               
+
+
+
+            <li class="divider"></li>
+
+           
+
+                  
+                   
+
+                    <a href="#" class="btn btn-danger">Reset</a>
+
+                  <%= submit_tag "Search", :nome => nil,:class => 'btn btn-blue'  %>
+          <% end %>
+                  
+  <hr>
+  </div>
+  </div>
+  </ul>
+  </div>
+  </div>
+  <!-- END Left Sidebar -->

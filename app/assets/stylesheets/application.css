@@ -1,0 +1,52 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require bootstrap
+ *= require_self
+ *= require_tree .
+ */
+.preco
+{
+	font-size: 30px;
+	margin-left: 500px;
+	margin-top: 10px;
+}
+
+.nome
+{
+	font-size: 30px;
+
+}
+
+.mail_user
+{
+	width: 40%;
+	background-color: blue;
+	margin-left: 700px;
+	margin-top: 100px;
+	display: none;
+}
+
+#contactar_user
+{
+	padding: 0;
+    margin: 0;
+    width:350px; 
+    margin-left: 80px;
+    margin-top: -200px;
+}
+.mail_user textarea
+{
+	
+}
+
+
+
+ 
