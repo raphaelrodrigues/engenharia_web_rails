@@ -4,8 +4,80 @@
 		"selected_items":
 		[
 			[
+				"min",
+				"minimum_price"
+			],
+			[
+				"ani",
+				"anuncio"
+			],
+			[
+				"ima",
+				"image_tag"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
 				"cate",
-				"categories"
+				"category_id"
+			],
+			[
+				"desa",
+				"desactivar"
+			],
+			[
+				"is",
+				"isActivo"
+			],
+			[
+				"belo",
+				"belongs_toUser"
+			],
+			[
+				"up",
+				"update"
+			],
+			[
+				"be",
+				"before_filter"
+			],
+			[
+				"un",
+				"unless	unless … end"
+			],
+			[
+				"bt",
+				"btn-input-tipo"
+			],
+			[
+				"categ",
+				"category_id"
+			],
+			[
+				"para",
+				"params"
+			],
+			[
+				"cat",
+				"categoria_id"
+			],
+			[
+				"esta",
+				"Estatisticas"
+			],
+			[
+				"re",
+				"redirect_to"
+			],
+			[
+				"num",
+				"num_img"
 			],
 			[
 				"ca",
@@ -32,10 +104,6 @@
 				"anuncio_id"
 			],
 			[
-				"margin",
-				"margin-top"
-			],
-			[
 				"mar",
 				"margin-left"
 			],
@@ -52,16 +120,8 @@
 				"margin-left"
 			],
 			[
-				"categ",
-				"categoria"
-			],
-			[
 				"pre",
 				"preco"
-			],
-			[
-				"is",
-				"isAdmin"
 			],
 			[
 				"st",
@@ -76,10 +136,6 @@
 				"user_id"
 			],
 			[
-				"user",
-				"username"
-			],
-			[
 				"passw",
 				"password"
 			],
@@ -90,10 +146,6 @@
 			[
 				"se",
 				"search"
-			],
-			[
-				"bt",
-				"btn"
 			],
 			[
 				"ar",
@@ -128,18 +180,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/sessions_controller.rb",
+			"file": "app/views/sessions/new.html.erb",
 			"settings":
 			{
-				"buffer_size": 1142,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/users_controller.rb",
-			"settings":
-			{
-				"buffer_size": 1753,
+				"buffer_size": 985,
 				"line_ending": "Unix"
 			}
 		}
@@ -168,61 +212,90 @@
 	},
 	"file_history":
 	[
-		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/show.html.erb",
 		"/Users/raphaelrodrigues/rails_project/web/app/controllers/anuncios_controller.rb",
-		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/main.js",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/_users.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/index.html.erb",
 		"/Users/raphaelrodrigues/rails_project/web/app/views/categories/_form.html.erb",
 		"/Users/raphaelrodrigues/rails_project/web/app/views/categories/index.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/sessions/new.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/painel.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/controllers/application_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/helpers/application_helper.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/helpers/users_helper.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/models/anuncio.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/models/user.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/controllers/sessions_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/anuncios.css.scss",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/find_anuncios.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_anuncios.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_left-bar.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/show.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/find_anuncios.js.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/main.js",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/dashboard.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/find_anuncio.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_dashboard3.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/layouts/application.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_form.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/show.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/controllers/users_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/web/config/routes.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/index.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/venda.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/troca.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/compra.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/new.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_destaques.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_anuncio_dashboard.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_anuncio.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/bootstrap.css",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/app.css",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/_form.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/theme.css",
+		"/Users/raphaelrodrigues/rails_project/web1/app/models/anuncio.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/searches/new.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/models/search.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/controllers/searches_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/searches/show.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/animate.css",
+		"/Users/raphaelrodrigues/rails_project/web/app/controllers/categories_controller.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/users.css.scss",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/stupidtable.min.js",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/new.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/edit.html.erb",
+		"/Users/raphaelrodrigues/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/estatisticas.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/db/migrate/20130220233532_add_dashboard_to_user.rb",
+		"/Users/raphaelrodrigues/rails_project/web/db/migrate/20130208000253_add_status_column_to_users.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/style1.css",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/venda.js.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/compra.js.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/categories/show.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/users/_anuncios.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/edit.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_form_edit.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/index.js.erb",
+		"/Users/raphaelrodrigues/rails_project/web/db/migrate/20130220034218_create_cassets.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/categories/new.html.erb",
+		"/Users/raphaelrodrigues/rails_project/web/app/models/asset.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/models/casset.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/models/category.rb",
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_dashboard2.html.erb",
 		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/highcharts.js",
 		"/Users/raphaelrodrigues/rails_project/web/Gemfile",
 		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/application.js",
-		"/Users/raphaelrodrigues/rails_project/web/config/routes.rb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/dashboard.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/estatisticas.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/controllers/categories_controller.rb",
-		"/Users/raphaelrodrigues/rails_project/web/app/models/category.rb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/users/index.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/users/_users.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/users/show.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/users/_form.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/controllers/users_controller.rb",
-		"/Users/raphaelrodrigues/rails_project/web/app/helpers/application_helper.rb",
-		"/Users/raphaelrodrigues/rails_project/web/app/models/anuncio.rb",
-		"/Users/raphaelrodrigues/rails_project/web/app/models/user.rb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/index.js.erb",
 		"/Users/raphaelrodrigues/rails_project/web/app/views/users/index.js.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/venda.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/compra.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/layouts/application.html.erb",
 		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/desactivos.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_form.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/controllers/application_controller.rb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_anuncios.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/index.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/new.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_anuncio.html.erb",
 		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/vendo.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/users/_anuncios.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/anuncios.css.scss",
 		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/application.css",
 		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/sessions.css.scss",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/sessions/new.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/app.css",
-		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/users.css.scss",
 		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/style.css",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/users/new.html.erb",
 		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/demo.css",
 		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/common.css",
 		"/Users/raphaelrodrigues/Downloads/CircleHoverEffects/index.html",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_dashboard2.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/style1.css",
-		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/bootstrap.css",
 		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/anuncios.js.coffee",
 		"/Users/raphaelrodrigues/rails_project/web/public/javascripts/application.js",
 		"/Users/raphaelrodrigues/rails_project/web/public/javascripts/script.js",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/_left-bar.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/db/migrate/20130208000253_add_status_column_to_users.rb",
-		"/Users/raphaelrodrigues/rails_project/web/app/controllers/sessions_controller.rb",
 		"/Users/raphaelrodrigues/rails_project/web/app/views/categories/_categories.html.erb",
 		"/Users/raphaelrodrigues/rails_project/web/config/environments/production.rb",
 		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/script.js",
@@ -231,7 +304,6 @@
 		"/Users/raphaelrodrigues/rails_project/web/public/assets/application.js",
 		"/Users/raphaelrodrigues/rails_project/web/db/migrate/20130205233156_add_category_column_to_anuncios.rb",
 		"/Users/raphaelrodrigues/rails_project/web/app/views/users/_anuncio.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/edit.html.erb",
 		"/Users/raphaelrodrigues/rails_project/web/db/migrate/20130204135847_create_users.rb",
 		"/Users/raphaelrodrigues/Desktop/CentOS.vmwarevm 3/web/app/models/anuncio.rb",
 		"/Users/raphaelrodrigues/Desktop/CentOS.vmwarevm 3/web/db/migrate/20130205223844_create_categories.rb",
@@ -267,43 +339,15 @@
 		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/bootstrap-responsive.css",
 		"/Users/raphaelrodrigues/rails_project/web/public/favicon.ico",
 		"/Users/raphaelrodrigues/rails_project/web/app/assets/javascripts/bootstrap-alert.js",
-		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/search.html.erb",
-		"/Users/raphaelrodrigues/rails_project/olx++/app/controllers/anuncios_controller.rb",
-		"/Users/raphaelrodrigues/rails_project/olx++/app/views/anuncios/search.html.erb",
-		"/Users/raphaelrodrigues/Documents/repositorio/templates_pesqusia/index.html",
-		"/Users/raphaelrodrigues/rails_project/invoices/app/views/layouts/application.html.erb",
-		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/prettyCheckable.css",
-		"/Users/raphaelrodrigues/rails_project/teste/app/assets/stylesheets/app.css",
-		"/Users/raphaelrodrigues/rails_project/web/app/assets/images/bg-search.png",
-		"/Users/raphaelrodrigues/rails_project/olx++/app/views/layouts/application.html.erb",
-		"/Users/raphaelrodrigues/rails_project/teste/app/views/layouts/application.html.erb",
-		"/Users/raphaelrodrigues/rails_project/teste/app/assets/stylesheets/application.css",
-		"/Users/raphaelrodrigues/rails_project/teste/app/assets/stylesheets/scaffolds.css.scss",
-		"/Users/raphaelrodrigues/rails_project/web/public/robots.txt",
-		"/Users/raphaelrodrigues/rails_project/web/public/index.html",
-		"/Users/raphaelrodrigues/rails_project/web/public/404.html",
-		"/Users/raphaelrodrigues/rails_project/web/public/422.html",
-		"/Users/raphaelrodrigues/rails_project/web/public/500.html",
-		"/Users/raphaelrodrigues/rails_project/web/app/assets/stylesheets/scaffolds.css.scss",
-		"/Users/raphaelrodrigues/Documents/repositorio/templates_pesqusia/css/app.css",
-		"/Users/raphaelrodrigues/Documents/repositorio/templates_pesqusia/assets/css/bootstrap.css",
-		"/Users/raphaelrodrigues/Documents/repositorio/templates_pesqusia/assets/css/bootstrap-responsive.css",
-		"/Users/raphaelrodrigues/Documents/repositorio/templates_pesqusia/animate.css",
-		"/Users/raphaelrodrigues/Documents/repositorio/templates_pesqusia/assets/css/style.css",
-		"/Users/raphaelrodrigues/Documents/repositorio/templates_pesqusia/assets/css/prettyCheckable.css",
-		"/Users/raphaelrodrigues/rails_project/invoices/app/controllers/invoices_controller.rb",
-		"/Users/raphaelrodrigues/rails_project/invoices/app/models/invoice.rb",
-		"/Users/raphaelrodrigues/rails_project/invoices/app/controllers/application_controller.rb",
-		"/Users/raphaelrodrigues/rails_project/invoices/app/controllers/users_controller.rb",
-		"/Users/raphaelrodrigues/rails_project/invoices/app/controllers/sessions_controller.rb"
+		"/Users/raphaelrodrigues/rails_project/web/app/views/anuncios/search.html.erb"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 48.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			""
@@ -314,6 +358,27 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"delete",
+			"€",
+			"translation missing",
+			"match",
+			"0",
+			"params[:",
+			"onClick",
+			"count",
+			"category_id",
+			"products\n",
+			">\n",
+			"index",
+			"category_name",
+			"contact rounded",
+			"offer",
+			"contact rounded",
+			"mail",
+			"   <% if (num_img = quantas_imagens_tem?(@anuncio.assets.count)) > 1%>\n              <ul class=\"thumbnails\">\n                \n               <% i = 1  %>\n                  <% while i < num_img  %>\n                      <li class=\"span2\">\n                        <a href=\"#\" class=\"thumbnail\"> \n                        <%= image_tag @anuncio.assets[i].image %>\n                        <% i += 1 %>\n                        </a>\n                      </li>\n                  <% end %>\n              </ul>\n\n            </div> \n        <% end %>",
+			"divider",
+			"swicth",
+			"footer",
 			" '",
 			"h1",
 			"span",
@@ -357,6 +422,8 @@
 		"replace_history":
 		[
 			"",
+			"anuncios",
+			"",
 			"nome",
 			"",
 			"utilizador",
@@ -376,53 +443,24 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/sessions_controller.rb",
+					"file": "app/views/sessions/new.html.erb",
 					"settings":
 					{
-						"buffer_size": 1142,
+						"buffer_size": 985,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								17,
+								17
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/controllers/users_controller.rb",
-					"settings":
-					{
-						"buffer_size": 1753,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -464,6 +502,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 24.0
+	},
 	"replace":
 	{
 		"height": 64.0

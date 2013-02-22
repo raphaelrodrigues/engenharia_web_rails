@@ -12,14 +12,14 @@
     </ul>
 
    <div class="field1" style="display:none;">
-      <%= text_field_tag :category_id, params[:category_id], :id=>"btn-input-category_id", :value =>  0 %>
+      <%= text_field_tag :category_id, params[:category_id], :id=>"btn-input-category_id", :value =>  "Todas as categorias" %>
    
     </div>
     
     
     <ul class="nav nav-list cat">
                 <li class="nav-header">Categories</li>
-                <li class="active" value="0"><a><div class="fs1" aria-hidden="true"  ></div>Todos as categorias</a></li>
+                <li class="active" value="Todas as categorias"><a>Todas as categorias</a></li>
                  <% @categories.each do |categoria| %>
                    <li value="<%= categoria.id %>" > <a><%= categoria.nome %></a></li>
                 <% end %>
@@ -28,17 +28,17 @@
     </ul>
 
     <div class="field1" style="display:none;">
-      <%= text_field_tag :tipo, params[:tipo], :id=>"btn-input-tipo", :value =>  0 %>
+      <%= text_field_tag :tipo, params[:tipo], :id=>"btn-input-tipo", :value =>  "Todos os tipos" %>
    
     </div>
 
    
       <ul class="nav nav-list tipo">
                 <li class="nav-header">Tipo</li>
-                <li class="active" value="0" ><a><div class="fs1" aria-hidden="true"  value="0"></div>Todos os tipos</a></li>
-                   <li  value="1" ><a>Compra</a></li>
-                   <li  value="2" ><a>Venda</a></li>
-                   <li  value="3" ><a>Troca</a></li>
+                <li class="active" value="Todos os tipos" ><a><div class="fs1" aria-hidden="true"  value="0"></div>Todos os tipos</a></li>
+                   <li  value="Compra" ><a>Compra</a></li>
+                   <li  value="Venda" ><a>Venda</a></li>
+                   <li  value="Troca" ><a>Troca</a></li>
                 <li class="divider"></li>
     </ul>
 

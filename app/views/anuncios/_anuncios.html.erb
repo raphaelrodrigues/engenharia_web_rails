@@ -11,10 +11,10 @@
 
   <div class="sort">
     <ul class="nav nav-pills" id="sort11">
-      <li ><%= sortable "nome", "Nome"%></li>
-      <li ><%= sortable "preco" , "Preco"%></li>
-      <li><%= sortable "created_at", "Released" %></li>
-      <li><%= sortable "category_id" , "Categoria"%></li>
+      <li  class="<%= 'active' if params[:sort]=="nome" || params[:sort].blank?  %>"><%= sortable "nome", "Nome"%></li>
+      <li class="<%= 'active' if params[:sort]=="preco" %>"><%= sortable "preco" , "Preco"%></li>
+      <li class="<%= 'active' if params[:sort]=="created_at" %>"><%= sortable "created_at", "Data Criação" %></li>
+      <li class="<%= 'active' if params[:sort]=="category_id" %>"><%= sortable "category_id" , "Categoria"%></li>
     </ul>
   </div>
 

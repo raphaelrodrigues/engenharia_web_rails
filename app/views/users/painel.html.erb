@@ -9,20 +9,21 @@
         <table class="table table-striped sortable1" >
               <thead>
                 <tr>
-                  <th>Nome</th>
+                  <th data-sort='Nome'>Nome</th>
                   <th>Descricao</th>
-                  <th>Preco</th>
-                  <th>Categoria</th>
-                  <th>Tipo</th>
+                  <th data-sort='Preco'>Preco</th>
+                  <th data-sort='Categoria'>Categoria</th>
+                  <th data-sort='Tipo'>Tipo</th>
                 </tr>
               </thead>
 
             <% @ultimos_anuncios.each do |anuncio| %>
+               <%  id_cat2nome(anuncio.category_id) %>
               <tr>
                 <td><%=link_to anuncio.nome , anuncio%></td>
                 <td><%= anuncio.descricao %></td>
                 <td><%= anuncio.preco unless (anuncio.tipo == "TIPO") %>€</td>
-                <td><%= anuncio.category_id %></td>
+                <td><%= @nome_categoria %></td>
                 <td><%= anuncio.tipo %></td>
               </tr>
             <% end %>
@@ -39,6 +40,8 @@
     </div>
 
    
+
+   
     
     <div class="block span6">
         <a href="#widget1container1" class="block-heading" data-toggle="collapse">Ranking Utilizadores </a>
@@ -47,13 +50,16 @@
             <% @lista_users =  ranking_anuncios %>
 
                  <table class="table table-striped sortable1" >
+                      <thead>
                           <tr>
-                            <th>Nome</th>
-                            <th>Nº anuncios</th>
+                            <th data-sort='Nome'>Nome</th>
+                            <th data-sort='Numero de anuncios'>Nº anuncios</th>
                           </tr>
+                      </thead>
                         <% @lista_users.each do |l| %>
                           <tr>
                             <td><%= link_to l.username, "/users/"+l.id.to_s %></td>
+
                             <td><%= l.n_anuncios %></td>
                           </tr>
                         <% end %>
@@ -61,5 +67,17 @@
         </div>
       </div>
     </div>
+
+     <div class="block span6">
+        <a href="#widget1container" class="block-heading" data-toggle="collapse">Estatisticas </a>
+        <div id="widget1container" class="block-body collapse in">
+           <div id="tablewidget" class="block-body collapse in">
+            <%= high_chart("my_id", get_grafico_precos_medios_cat ) %>
+        </div>
+      </div>
+    </div>
+
+
+
 
 </div>

@@ -9,15 +9,18 @@ module ApplicationHelper
 
   end
 
-  
-
+  #devolve os ultimos anuncios
   def ultimos_anuncios(num)
   	@ultimos10_anuncios = Anuncio.find(:all,:limit => num, :order=> 'created_at desc')
   end
 
-
+  #devolve uma lista com username,id,numero de anuncios do user
   def ranking_anuncios
   	@lista_users = User.find_by_sql(%q{select u.username,u.id,count(a.id) as n_anuncios from Users u, Anuncios a where u.id = a.user_id group by u.username order by count(a.id) desc})
+  end
+
+  def id_cat2nome(category_id)
+    @nome_categoria = Category.find_by_id(category_id).nome
   end
 
 

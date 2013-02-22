@@ -1,17 +1,19 @@
 <h1>Listing categories</h1>
 
-<table class="table table-striped" >
-  <tr>
-    <th>Nome</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<table class="table table-striped sortable1" >
+  <thead>
+    <tr>
+      <th data-sort='Nome'>Nome</th>
+      <th data-sort='Nº anuncios'>Nº Anuncios</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
 
 <% @categories.each do |category| %>
   <tr>
-    <td><%= category.nome %></td>
-    <td><%= link_to 'Ver', category %></td>
+    <td><%=link_to category.nome, category %></td>
+    <td><%= category.anuncios.count %></td>
     <td><%= link_to 'Editar', edit_category_path(category) %></td>
     <td><%= link_to 'Apagar', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>

@@ -4,4 +4,7 @@
 	<%= render :partial => 'anuncios' %>
 </div>
 
+<div class="paginate">
+	<%= will_paginate @anuncios, :inner_window => 2 %>
+</div>
 

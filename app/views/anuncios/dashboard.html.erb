@@ -4,7 +4,7 @@
    <%= render :partial => 'dashboard3' %>
 <% else %>
 
-  <%= render :partial => 'left-bar-dash' %>
+  <%= render :partial => 'left-bar' %>
 
 
 
@@ -21,7 +21,6 @@
               <div class="ch-item ch-img-<%= i %>">
                 <div class="ch-info" onclick="location.href='http://localhost:3000/anuncios?category_id=<%= categoria.id %>'" id="<%= categoria.id %>">
                   <h3><%= categoria.nome %></h3>
-                  <p>by Charlie Wagers <a href="http://drbl.in/ekhp">View on Dribbble</a></p>
                 </div>
 
               </div>

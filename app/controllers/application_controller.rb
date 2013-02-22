@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   helper_method :get_grafico_anuncio_categoria,:get_grafico_precos_medios_cat,:tempo_registo,:correct_anuncio,:correct_user
 
 
+  #metodo usado para permissoes
   def current_user
 		if session[:user_id]
 		    @current_user = User.find(session[:user_id])
@@ -16,11 +17,12 @@ class ApplicationController < ActionController::Base
 		    @current_user
   end
 
-
+  #verifica se está com ligin feito
   def signed_in?
 	 !!current_user
   end
 
+  #verifica se tem permissoes de admin
   def isAdmin?
     if session[:perm] == 1
       return true;
@@ -29,6 +31,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  #verifica se tem permissoes de moderador
   def isModerador?
     if session[:perm] == 2
       return true;
@@ -37,6 +40,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  #verifica se tem permissoes de registado
   def isRegistado?
     if session[:perm] == 0
       return true;
@@ -45,6 +49,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  #verifica quantas imagens tem uma anuncio
   def quantas_imagens_tem?(val)
     return val
   end
@@ -66,6 +71,8 @@ class ApplicationController < ActionController::Base
       return false
     end
   end
+
+  # devolve a percentagem de anuncios por categoria
   def categoria_percent
         
         obj1 = Array.new
@@ -79,6 +86,7 @@ class ApplicationController < ActionController::Base
         return obj1
   end
 
+   # devolve o preco medio de anuncio de cada categoria
   def avg_price_categoria
       obj = Array.new
       Category.all.each do |c|
@@ -101,7 +109,7 @@ class ApplicationController < ActionController::Base
       return @category_name
   end 
 
-
+  #devolve uma grafico generico 
   def get_grafico(obj,tipo_grafico)
 
    return  @h = LazyHighCharts::HighChart.new('pie') do |f|
@@ -162,15 +170,17 @@ class ApplicationController < ActionController::Base
         end
   end
 
+
+
    #da grafico das estatisticas
   def get_grafico_precos_medios_cat
 
    obj1 = avg_price_categoria
 
    return  @h = LazyHighCharts::HighChart.new('pie') do |f|
-          f.chart({:defaultSeriesType=>"bar" , :margin=> [50, 200, 60, 170]} )
+          f.chart({:defaultSeriesType=>"bar" ,type: 'column',renderTo: 'container', :margin=> [10, 100, 60, 100]} )
           series = {
-                   :type=> "bar",
+                   :type=> 'column',
                    :name=> 'Media de precos por categoria',
                    :data=> obj1
           }
@@ -190,8 +200,8 @@ class ApplicationController < ActionController::Base
               :color=>"white",
               :style=>{
                 :font=>"13px Trebuchet MS, Verdana, sans-serif",
-                :width => "50px",
-                :height => "50px" 
+                :width => "250px",
+                :height => "150px" 
               }
             }
           })
@@ -204,6 +214,7 @@ class ApplicationController < ActionController::Base
 
 
 private
+  #metodos para gerir permissoes
   def correct_user
     @user = User.find(params[:id])
     redirect_to "/anuncios" unless  current_user
@@ -222,11 +233,12 @@ protected
     redirect_to "/log_in", :alert => t('.need_to_be_logged_in') unless signed_in?
   end
 
-
+  # verfica se é admin
   def authorize_admin
     redirect_to "/anuncios" unless isAdmin?
   end
 
+  #verifica se é modoredor
   def authorize_moderador 
     redirect_to "/anuncios" unless isModerador?
   end

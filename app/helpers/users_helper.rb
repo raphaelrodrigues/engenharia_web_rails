@@ -14,7 +14,7 @@ module UsersHelper
 
 		return a
 	end
-
+	
 	def to_s_moderador(dashboard)
 
 		case dashboard

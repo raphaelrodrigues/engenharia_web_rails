@@ -28,7 +28,7 @@ class SessionsController < ApplicationController
           session[:perm] = 0
       end
       
-      redirect_to anuncios_path, :notice => t('.login_message')
+      redirect_to anuncios_path
     else
       @login_error = true
       respond_to do |format|

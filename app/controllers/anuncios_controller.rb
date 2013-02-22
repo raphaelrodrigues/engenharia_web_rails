@@ -21,28 +21,30 @@ class AnunciosController < ApplicationController
     end
   end
 
-  # /venda
+  # /venda com anuncios de venda
   def venda
     @anuncios = Anuncio.order(sort_column + " " + sort_direction).paginate(:page => params[:page],:per_page => 9).search(params[:nome],"Venda",params[:category_id]) 
     @categories = Category.find( :all , :order => 'nome ')
   end
 
-  # /compra
+  # /compra anuncios de compra
   def compra
     @anuncios = Anuncio.order(sort_column + " " + sort_direction).paginate(:page => params[:page],:per_page => 9).search(params[:nome],"Compra",params[:category_id]) 
     @categories = Category.find( :all , :order => 'nome ')
   end
 
+  # anuncios de trocas
   def troca
     @anuncios = Anuncio.order(sort_column + " " + sort_direction).paginate(:page => params[:page],:per_page => 9).search(params[:nome],"Troca",params[:category_id]) 
     @categories = Category.find( :all , :order => 'nome ')
   end
 
-  # /desactivos
+  # /desactivos anuncios que estao desactivos(activo = 0)
   def desactivos
     @anuncios = Anuncio.order(sort_column + " " + sort_direction).paginate(:page => params[:page],:per_page => 9).desactivos
   end
 
+  #  para activar um anuncio
   def activar
     @anuncio = Anuncio.find(params[:id])
     @anuncio.activo = 1
@@ -51,6 +53,7 @@ class AnunciosController < ApplicationController
     render :show
   end
 
+  # para desactivar um anuncio
   def desactivar
     @anuncio = Anuncio.find(params[:id])
     @anuncio.activo = 0
@@ -98,7 +101,6 @@ class AnunciosController < ApplicationController
 
   #devolve valores para os graficos das estatisticas
   def estatisticas
-
 
       @obj1 = categoria_percent
         
@@ -177,10 +179,10 @@ class AnunciosController < ApplicationController
   end
 
   def find_anuncios
-
+    
     @categories = Category.find( :all , :order => 'nome ')
 
-    @anuncios = Anuncio.advanced_search(params[:nome],params[:minimum_price],params[:maximum_price],params[:category_id],params[:tipo])
+    @anuncios = Anuncio.advanced_search(params[:nome],params[:category_id],params[:tipo],params[:minimum_price],params[:maximum_price]).order(sort_column + " " + sort_direction).paginate(:page => params[:page],:per_page => 9)
 
   end
 
