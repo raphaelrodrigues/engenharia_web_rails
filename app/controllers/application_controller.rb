@@ -243,6 +243,10 @@ protected
     redirect_to "/anuncios" unless isModerador?
   end
 
+  #verifica se é modoredor ou administrador
+  def authorize_backend
+    redirect_to "/anuncios" unless isModerador?
+  end
 
 	
 end

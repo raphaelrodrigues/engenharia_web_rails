@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   
   before_filter :authorize_admin
   
+
   before_filter :correct_user ,:only => [:edit ,:update ]
   skip_before_filter :authorize_admin , :except => [ :index,:painel ]
    #se nao for admin nao tem autorizacao para entrar
@@ -80,7 +81,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @anuncios = Anuncio.find_by_user_id(@user.id)
-    @anuncios.destroy_all
+    @user.anuncios.each{ |anuncio| anuncio.destroy}
     @user.destroy
 
     respond_to do |format|

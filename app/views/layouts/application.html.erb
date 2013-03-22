@@ -31,7 +31,8 @@
           <%= link_to 'Olx++', dashboard_path, :class => "brand" %>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="<%= 'active' if current_page?(anuncios_path) %>"><%= link_to 'Pesquisar', anuncios_path %></li>
+              
+              <li class="<%= 'active' if current_page?(anuncios_path) %>"><%= link_to 'Anúncios', anuncios_path %></li>
               <li class="<%= 'active' if current_page?(venda_path) %>"><%= link_to 'Venda', venda_path %></li>
               <li class="<%= 'active' if current_page?(compra_path) %>"><%= link_to 'Compra', compra_path %></li>
               <li class="<%= 'active' if current_page?(troca_path) %>"><%= link_to 'Troca', troca_path %></li>
@@ -42,7 +43,7 @@
               <% end %>
 
               <li class="<%= 'active' if current_page?(new_anuncio_path) %>"><%= link_to 'Novo Anuncio', new_anuncio_path %></li>
-              <% if isModerador? %>
+              <% if isModerador?  %>
                  <li class="<%= 'active' if current_page?(categories_path) %>"><%= link_to 'Categorias', categories_path %></li>
               <% end %>
               

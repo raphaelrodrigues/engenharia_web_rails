@@ -1,4 +1,4 @@
-$(function ()
+  $(function ()
 { $("#example").popover();
 html: true
 });
@@ -94,7 +94,7 @@ $(window).load(function(){
       });
 
 
-
+        /*
         window.onscroll = function(){
         if(getScrollTop()>100) {
             document.getElementById("search-section").style.position="fixed";
@@ -120,11 +120,19 @@ $(window).load(function(){
           // IE in quirks mode
           return document.body.scrollTop;
       }
+      */
 
 
   });
 
+function validaFormAnuncio()
+{
+  var preco = document.forms["formAnuncio"]["anuncio[preco]"];
+  //var  = document.forms["formAnuncio"]["anuncio[preco]"];
+  preco.className += " error-input";
 
+  return true;
+}
 
 
 

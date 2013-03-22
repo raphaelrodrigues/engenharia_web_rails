@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   
-  before_filter :authorize_moderador #se nao for authorize_moderador nao tem autorizacao para entrar
+  before_filter :authorize_backend #se nao for authorize_moderador nao tem autorizacao para entrar
   # GET /categories
   # GET /categories.json
   def index
@@ -78,6 +78,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
+    @category.anuncios.each{ |anuncio| anuncio.destroy}
 
     respond_to do |format|
       format.html { redirect_to categories_url }

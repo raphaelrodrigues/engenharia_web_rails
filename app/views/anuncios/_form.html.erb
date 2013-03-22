@@ -1,7 +1,8 @@
 <div class="container-fluid">      
 
  <div class="infoN">
-  <%= form_for @anuncio , :html => { :multipart => true } do |f| %>
+  <%= form_for @anuncio , :html => { :multipart => true,:onsubmit =>
+'return validaFormAnuncio()' ,:name=>"formAnuncio"} do |f| %>
     <% if @anuncio.errors.any? %>
       <div id="error_explanation">
 
@@ -20,19 +21,19 @@
    <div class="row-fluid">   
             <div class="span2 lightblue">
                <div class="field">
-                  <%= f.label :nome %><br />
+                  <%= f.label "Nome*" %><br />
                   <%= f.text_field :nome ,:class=>"span12" %>
                 </div>          
             </div><!--/span-->
             <div class="span5 lightblue">
               <div class="field">
-                <%= f.label :descricao %><br />
+                <%= f.label "Descrição*" %><br />
                 <%= f.text_area :descricao , :rows=>5, :cols=>40,:class=>"span12" %>
               </div>    
             </div><!--/span-->
             <div class="span5 lightblue">
               <div class="field">
-                <%= f.label :preco %><br />
+                <%= f.label "Preço €" %><br />
                 <%= f.text_field :preco %>
               </div>
             </div><!--/span-->
@@ -42,7 +43,7 @@
         <%= f.hidden_field :activo ,:value => 1%>
 
   <div class="field">
-    <%= f.label :tipo %><br />
+    <%= f.label "Tipo*" %><br />
     <%= f.hidden_field :tipo,:id =>"btn-input-tipo", :value =>  @anuncio.tipo  %>
   </div>
 
@@ -71,7 +72,7 @@
    <!-- end-->
 
 
-  <% if !current_page?(new_anuncio_path) %>
+  <% if !current_page?(new_anuncio_path)%>
     <div class="field">
 
       <%= f.label :destaque %>
@@ -82,7 +83,7 @@
   <%= f.hidden_field :user_id ,:value => current_user.id %>
 
   <div class="field">
-    <%= f.label :category_id %><br />
+    <%= f.label "Categoria*" %><br />
     <%= f.hidden_field :category_id,:id =>"btn-input", :value => @anuncio.category_id %>
   </div>
 
@@ -105,7 +106,7 @@
    <% end %>
    <!-- end-->
 
-    <p> Imagens </p>
+    <p> Imagens* </p>
    <!--imagens-->
    <div class="newPaperclipFiles">
 
